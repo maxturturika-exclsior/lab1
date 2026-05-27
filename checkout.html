@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформлення замовлення | Guitar shop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <img src="https://images.unsplash.com/photo-1692271931628-adc2b16670dd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        
+        <div class="logo">
+            <h1>GUITAR WORLD</h1>
+        </div>
+        
+        <div class="header-right">
+            <a href="index.html#arrivals" class="nav-btn">MAIN</a>
+            <a href="index.html#aside-menu" class="nav-btn">ABOUT US</a>
+            <a href="index.html#popular" class="nav-btn">PRODUCT LIST</a>
+            <a href="index.html#aside-menu" class="nav-btn">CONTACTS</a>
+            <a href="checkout.html" class="cart-btn">CART (0)</a>
+        </div>
+    </header>
+
+    <main class="form-page-container">
+        <h2>Оформлення замовлення</h2>
+        
+        <form action="#" method="POST" class="checkout-form">
+            <fieldset>
+                <legend>1. Особисті дані</legend>
+                <div class="form-group">
+                    <label for="fullName">ПІБ:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Іванов Іван Іванович">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="yourname@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[\+]\d{2}\d{10}" placeholder="+380991234567" required title="Формат: +380XXXXXXXXX">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Спосіб доставки</legend>
+                <div class="form-radio">
+                    <input type="radio" id="deliveryNova" name="delivery" value="nova_poshta" checked>
+                    <label for="deliveryNova">Нова Пошта</label>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" id="deliveryCourier" name="delivery" value="courier">
+                    <label for="deliveryCourier">Кур'єр за адресою</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Місто:</label>
+                    <select id="city" name="city">
+                        <option value="kyiv">Київ</option>
+                        <option value="lviv">Львів</option>
+                        <option value="odesa">Одеса</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Коментар та згода</legend>
+                <div class="form-group">
+                    <label for="comment">Коментар до замовлення:</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Ваші побажання до замовлення..."></textarea>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Я погоджуюсь з правилами магазину</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-form-btn">Підтвердити замовлення</button>
+        </form>
+    </main>
+
+    <footer> 
+        GUITAR WORLD: (c) 2026 All rights are not reserved. Watchhimbecomeagod
+        <form action="">
+            <input type="email" name="email" id="email-footer" value="Your email">
+            <input type="button" name="submit" value="Submit">
+        </form>
+    </footer>
+</body>
+</html>

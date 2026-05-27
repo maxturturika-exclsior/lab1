@@ -1,0 +1,115 @@
+.form-page-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.form-page-container h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.checkout-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fdfdfd;
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+
+legend {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--dark-color);
+  padding: 0 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.6rem;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: var(--light-color);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-radio, .form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.form-radio label, .form-checkbox label {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.form-radio input, .form-checkbox input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.submit-form-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.submit-form-btn:hover {
+  background-color: #0000cc;
+}
+
+.form-group input:invalid:focus,
+.form-group textarea:invalid:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.form-group input:valid {
+  border-color: #008000;
+}
