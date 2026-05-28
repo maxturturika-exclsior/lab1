@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Кошик — GUITAR WORLD</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero" style="height: 120px; display: flex; justify-content: center; align-items: center; background: #111;">
+        <h1 style="font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 40px; letter-spacing: 2px;">КОШИК ТОВАРІВ</h1>
+    </header>
+    
+    <main style="padding: 40px 10%; max-width: 800px; margin: 0 auto; min-height: 50vh;">
+        <div id="cart-items" style="font-family: 'Oswald', sans-serif; font-size: 22px; color: #333; line-height: 2;"></div>
+        
+        <hr style="margin: 30px 0; border: 0; border-top: 2px solid #ddd;">
+        
+        <h2 id="total-price" style="font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: #e67e22; letter-spacing: 1px;"></h2>
+        
+        <div style="margin-top: 40px;">
+            <a href="./index.html" class="nav-btn" style="text-decoration: none; padding: 12px 25px; background: #111; color: #fff; font-family: 'Oswald', sans-serif; font-weight: bold; border-radius: 3px;">ПОВЕРНУТИСЯ ДО ПОКУПОК</a>
+        </div>
+    </main>
+
+    <script>
+       
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let container = document.getElementById('cart-items');
+        let total = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = "<p style='color: #777;'>Ваш кошик порожній. Додайте щось із каталогу!</p>";
+            document.getElementById('total-price').innerText = "Загальна сума: 0 $";
+        } else {
+            
+            cart.forEach(item => {
+                container.innerHTML += `<p>🎸 ${item.name} — <span style="font-weight: bold;">${item.price} $</span></p>`;
+                total += item.price; 
+            });
+            
+            
+            document.getElementById('total-price').innerText = "Загальна сума: " + total + " $";
+        }
+    </script>
+</body>
+</html>
